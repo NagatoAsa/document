@@ -16,23 +16,23 @@
 
 打开 balenaEtcher，点击 *Flash from file* ，选择镜像文件（可以直接选择 zip 文件，无需解压）
 
-<img src="./屏幕截图_20251025_211537.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图_20251025_211537.png" style="zoom:50%;" />
 
 准备好读卡器，将 sd 卡接入电脑，然后我们点击 *Select Target* ，选择我们要烧录的 sd 卡**（这里一定要看清楚，小心不要选错设备，一旦开始烧录，你选择的设备里的所有数据都将被清空）**
 
-<img src="./屏幕截图_20251025_212234.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图_20251025_212234.png" style="zoom:50%;" />
 
-<img src="./屏幕截图_20251025_212307.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图_20251025_212307.png" style="zoom:50%;" />
 
 最后，我们点击 *Flash!* ，等待烧录完成即可
 
-<img src="./屏幕截图_20251025_212951.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图_20251025_212951.png" style="zoom:50%;" />
 
 烧录完成后，取下 sd 卡，将 sd 卡插入 Jetson Nano 的 sd 卡槽
 
 sd 卡槽的位置如下：
 
-<img src="./20251025_213409.jpg" style="zoom:20%;" />
+<img src="./assets/20251025_213409.jpg" style="zoom:20%;" />
 
 ## 2 初始化系统
 
@@ -42,37 +42,37 @@ sd 卡槽的位置如下：
 
 下面是初始化过程
 
-<img src="./Screenshot from 2021-12-10 09-16-31.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2021-12-10 09-16-31.png" style="zoom:50%;" />
 
-<img src="./Screenshot from 2021-12-10 09-16-41.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2021-12-10 09-16-41.png" style="zoom:50%;" />
 
 这里选择**英语（美国）**键盘布局即可
 
-<img src="./Screenshot from 2021-12-10 09-16-57.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2021-12-10 09-16-57.png" style="zoom:50%;" />
 
 请务必选择一个网络连接，最好是无线网络，后面有大作用
 
-<img src="./Screenshot from 2021-12-10 09-17-43.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2021-12-10 09-17-43.png" style="zoom:50%;" />
 
-<img src="./Screenshot from 2021-12-10 09-17-48.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2021-12-10 09-17-48.png" style="zoom:50%;" />
 
 这里填写系统的用户名和密码，请一定要记住自己的**用户名**（圈出来**打勾**的，不是那个打岔的）和**密码**，忘记了很麻烦。还有也要记住这里的**计算机名**。这里一定要选择**自动登录**而不是登陆时需要密码，方便后续的开发部署
 
-<img src="./Screenshot from 2025-10-26 02-35-31.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 02-35-31.png" style="zoom:50%;" />
 
 这里保持默认不要动
 
-<img src="./Screenshot from 2025-10-26 02-35-39.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 02-35-39.png" style="zoom:50%;" />
 
-<img src="./Screenshot from 2025-10-26 02-35-50.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 02-35-50.png" style="zoom:50%;" />
 
 配置完成后，等待片刻，系统会重启
 
-<img src="./Screenshot from 2025-10-26 10-36-24.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 10-36-24.png" style="zoom:50%;" />
 
 然后我们就进到系统桌面，至此系统初始化大功告成
 
-<img src="./Screenshot from 2025-10-26 10-37-53.png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 10-37-53.png" style="zoom:50%;" />
 
 ## 小插曲1：摆脱 Jetson Nano 外接屏幕和键盘鼠标
 
@@ -82,43 +82,43 @@ sd 卡槽的位置如下：
 
 还记得我们前面初始化的时候让大家务必连接到一个无线网络吗？Jetson Nano 开机时会自动连接到这个网络，我们将自己的电脑也连接到这个无线网络中，让 Jetson Nano 和我们的电脑处于同一个局域网下，然后我们打开无线网络的后台（这里只展示三星手机热点的情况，若是其他手机品牌，或者使用路由器的，**请具体情况具体分析**）查看 Jetson Nano 的计算机名对应的 IP 地址
 
-<img src="./Screenshot_20251026_122100_Settings.png" style="zoom:25%;" />
+<img src="./assets/Screenshot_20251026_122100_Settings.png" style="zoom:25%;" />
 
 打开 xshell ，点击新建
 
-<img src="./屏幕截图 2025-10-26 122628.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-10-26 122628.png" style="zoom:50%;" />
 
 在这里填写刚才我们看到的 IP 地址
 
-<img src="./屏幕截图 2025-10-26 122737.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 122737.png" style="zoom:75%;" />
 
 然后点击这里
 
-<img src="./屏幕截图 2025-10-26 123103.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 123103.png" style="zoom:75%;" />
 
 在这里输入 Jetson Nano 系统中的用户名和密码
 
-<img src="./屏幕截图 2025-10-26 123202.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 123202.png" style="zoom:75%;" />
 
 点击连接，我们就可以用命令行连接到 Jetson Nano 了
 
-<img src="./屏幕截图 2025-10-26 123519.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 123519.png" style="zoom:75%;" />
 
-<img src="./屏幕截图 2025-10-26 124244.png" style="zoom: 50%;" />
+<img src="./assets/屏幕截图 2025-10-26 124244.png" style="zoom: 50%;" />
 
 同理 xftp 也是这个方式连接
 
-<img src="./屏幕截图 2025-10-26 124443.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 124443.png" style="zoom:75%;" />
 
-<img src="./屏幕截图 2025-10-26 124507.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 124507.png" style="zoom:75%;" />
 
 然后我们就可以轻松地在我们的电脑和 Jetson Nano 之间传输文件了
 
-<img src="./屏幕截图 2025-10-26 124834.png" style="zoom: 50%;" />
+<img src="./assets/屏幕截图 2025-10-26 124834.png" style="zoom: 50%;" />
 
 后续本教程将会使用 xshell 和 xftp 进行教学，不打算使用远程连接的同学可以使用 Jetson Nano 中的终端来执行后续教学中的命令
 
-<img src="./Screenshot from 2025-10-26 10-37-53(1).png" style="zoom:50%;" />
+<img src="./assets/Screenshot from 2025-10-26 10-37-53(1).png" style="zoom:50%;" />
 
 ## 小插曲2：sd卡丢了？开发的时候不小心搞坏了环境？别担心，这里还有后悔药
 
@@ -158,7 +158,7 @@ sudo pacman -Sy pv btop
 lsblk
 ```
 
-<img src="./屏幕截图 2025-10-26 131938.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 131938.png" style="zoom:75%;" />
 
 这里我们可以看到设备 sdc 大小为59.5G，接近 64 GB （我使用的是 64 GB 内存卡）而且有很多分区（sdc1、sdc2、......、sdc14），可以看出 sdc 就是我们的 sd 卡（不一定是 sdc ，需要自己判断是哪个设备）
 
@@ -174,7 +174,7 @@ sudo umount /dev/sdc1
 
 最后，我们检查一下 sdc 的所有分区是否都没有被挂载
 
-<img src="./屏幕截图 2025-10-26 132809.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-26 132809.png" style="zoom:75%;" />
 
 确认完全解除挂载后，我们输入以下命令
 
@@ -201,7 +201,7 @@ sudo dd if=/dev/sdc bs=4M | pv -s $(sudo blockdev --getsize64 /dev/sdc) | xz -9 
 
 这里我需要解释一下这条命令里的 xz 命令，大家可以在终端里输入`btop`并回车运行，此时会显示以下界面
 
-<img src="./屏幕截图 2025-10-26 135124.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-10-26 135124.png" style="zoom:50%;" />
 
 我们可以看到左上角有 C0、C1、C2、C3 四个东西，说明我们的处理器一共4线程，我的建议是使用和你处理器相同的线程数进行压缩，假如压缩过程中内存消耗太大导致卡死或崩溃，可以将线程数调低，或者直接用-T0。当然我们还有一种选择，那就是不压缩进行备份，速度最快，但是备份文件占用的空间也是最大的，大小大约是和你的 sd 卡一样大的，也就是 sd 卡越大，备份出来的文件就越大，与你 sd 卡里具体存了多少东西无关
 
@@ -303,19 +303,19 @@ chmod +x Archiconda3-0.2.3-Linux-aarch64.sh
 
 这里直接按回车
 
-<img src="./屏幕截图 2025-10-26 153942.png" />
+<img src="./assets/屏幕截图 2025-10-26 153942.png" />
 
 这里输入`yes`后回车
 
-<img src="./屏幕截图 2025-10-26 154058.png" />
+<img src="./assets/屏幕截图 2025-10-26 154058.png" />
 
 这里保持默认回车即可
 
-<img src="./屏幕截图 2025-10-26 154217.png" />
+<img src="./assets/屏幕截图 2025-10-26 154217.png" />
 
 这里输入`yes`后回车
 
-<img src="./屏幕截图 2025-10-26 154331.png" />
+<img src="./assets/屏幕截图 2025-10-26 154331.png" />
 
 archiconda就安装完成啦
 
@@ -333,7 +333,7 @@ conda -V
 
 输出以下结果就是安装成功了
 
-<img src="./屏幕截图 2025-10-26 154741.png" />
+<img src="./assets/屏幕截图 2025-10-26 154741.png" />
 
 ----
 
@@ -347,7 +347,7 @@ conda create -n vision python==3.8
 
 等待一段时间，可能比较久
 
-<img src="./屏幕截图 2025-10-26 160026.png" />
+<img src="./assets/屏幕截图 2025-10-26 160026.png" />
 
 输入`y`回车
 
