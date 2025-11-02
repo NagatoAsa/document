@@ -6,7 +6,7 @@
 
 什么是目标检测？目标检测是计算机视觉中的一项基础任务，其核心目标是让计算机不仅能识别出图像或视频中存在的特定物体是“什么”（即分类），还能精确地定位出这些物体“在哪里”（即定位）。与仅给整张图片打上一个标签的图像分类不同，目标检测需要为图片中的每一个感兴趣物体都标定出一个通常用矩形框（Bounding Box）表示的位置，并同时给出该框内物体的类别标签。
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\c716dfe6276e40c8af4dd807cc29d44b.png" style="zoom:50%;" />
+<img src="./assets/c716dfe6276e40c8af4dd807cc29d44b.png" style="zoom:50%;" />
 
 YOLO 是一种轻量级，速度快、准确率高的深度学习目标检测算法，YOLO 如此经典好用的一大原因是其极快的迭代速度，几乎是一年半载就更新一个大版本，主打一个与时俱进。而且，从YOLOv8开始，不再局限于目标检测领域，在图像分割、关键点检测等领域也在持续发力，这个教程里我们只讨论YOLOv8 目标检测的部分，其他部分除了数据采集标注方面有所不同，其他的也大差不差。
 
@@ -64,37 +64,37 @@ lebelimg
 
 点击 *Open Dir*
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222608.png" style="zoom: 50%;" />
+<img src="./assets/屏幕截图 2025-10-31 222608.png" style="zoom: 50%;" />
 
 然后选择我们的数据集图片的目录
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222701.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-31 222701.png" style="zoom:75%;" />
 
 然后再点击 *Change Save Dir*
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222608(1).png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-10-31 222608(1).png" style="zoom:50%;" />
 
 然后选择标注文件（用于记录标注出来的目标的位置和类别）的存放位置，这里建议和图片放在一起
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222746.png" style="zoom:75%;" />
+<img src="./assets/屏幕截图 2025-10-31 222746.png" style="zoom:75%;" />
 
 然后我们点击菜单栏中的 *View*，勾选 *Auto Save Mode* 启用自动保存~~（你也不想辛辛苦苦打了几个小时的标忘记保存重新打吧）~~
 
 如果只有一个类别的话，可以勾选 *Single Class Mode*，标注的时候会快一点
 
-![](C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222806.png)
+<img src="./assets/屏幕截图 2025-10-31 222806.png" />
 
 然后我们就可以~~快乐~~打标了
 
 按键盘 w 键创建标注框，用鼠标拉出一个标注框（和用微信QQ截图的方法一样），按照需求输入标注框中的目标对应的类别（不要用中文），按键盘 d 键下一张图片，按键盘 a 键可以回到上一张图片
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 231105.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-10-31 231105.png" style="zoom:50%;" />
 
 对标注框不满意的可以先用鼠标选中，拖动四个锚点来调整，也可以选中之后按下键盘 Delete 键删除（或鼠标右键选择删除） 
 
 这里的类型注意要选 **PascalVOC **而不是选择 YOLO，虽然选择 YOLO 可以直接输出 YOLO 训练时需要的 txt 标注文件，但是当多个人分工做标注任务时，不同的人用 YOLO 格式输出的类别顺序是不一样的，可能导致数据类别是乱的，到时候训练出来的结果全是错的
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-10-31 222608(2).png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-10-31 222608(2).png" style="zoom:50%;" />
 
 **注意：数据标注的时候，我们框的时候一定要尽量紧密贴合目标物，不要多框也不要少框。当目标物被遮挡时，不要只框目标看得见的部分，看不见的部分也要框起来。标注的时候，不要因为目标小或者模糊而忽略，要全部框起来**
 
@@ -1077,11 +1077,11 @@ conda activate train
 
 然后浏览器打开 [pytorch.org](https://pytorch.org)，点击 *Get started*
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 163959.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 163959.png" style="zoom:50%;" />
 
 然后看到这个界面，复制这里的命令
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 164252.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 164252.png" style="zoom:50%;" />
 
 这里的 CUDA 版本请根据你安装的 CUDA 版本来选择，CUDA 能够向下兼容，没有匹配的尽量选择同一个大版本的
 
@@ -1123,13 +1123,13 @@ names:
 
 完成所有工作后，你的文件夹应该是长这样的（classes.txt 可以不用放进来）：
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 202449.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 202449.png" style="zoom:50%;" />
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 202453.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 202453.png" style="zoom:50%;" />
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 202457.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 202457.png" style="zoom:50%;" />
 
-<img src="C:\Users\Nagat\Project\document\从训练到部署，NVIDIA Jetson Nano 部署 YOLOv8 目标检测\assets\屏幕截图 2025-11-01 202501.png" style="zoom:50%;" />
+<img src="./assets/屏幕截图 2025-11-01 202501.png" style="zoom:50%;" />
 
 ## 5 训练阶段（在自己的电脑上完成）
 
@@ -1535,6 +1535,12 @@ python pt2engine.py
 然后我们就可以在工作目录下看到生成的 engine 文件
 
 因为 TensorRT 量化之后，模型的类别标签信息会丢失，我们将我们之前训练使用的 yaml 文件传输到 Jetson Nano 上，用来识别标签
+
+安装依赖：
+
+```python
+pip install pyyaml
+```
 
 下面是使用 TensorRT 量化后的 engine 文件运行目标检测推理的例程 `detect_trt.py`：
 
