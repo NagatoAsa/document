@@ -1226,7 +1226,7 @@ python train.py
 
 首先找到我们原数据集的 classes.txt
 
-下面是我们新的 xml 转 txt 的脚本：
+下面是我们新的 xml 转 txt 的脚本 `xml_to_txt_bare.py`：
 
 ```python
 import os
